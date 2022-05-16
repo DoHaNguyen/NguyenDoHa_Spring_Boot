@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<aside class="main-sidebar sidebar-dark-primary elevation-4" id="html_sliderbar">
+    <a th:href="@{/logout}" class="brand-link">
+        <img th:src="@{~/BE/dist/img/AdminLTELogo.png}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+             style="opacity: .8">
+        <span class="brand-text font-weight-light">Logout</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar" >
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+                <img th:src="@{~/BE/dist/img/user2-160x160.jpg}" class="img-circle elevation-2" alt="User Image">
+            </div>
+            <div class="info">
+                <p th:text="${session.admincheck}" th:style="|color: white;text-transform: uppercase|" class="d-block"></p>
+            </div>
+        </div>
+
+        <nav class="mt-2" >
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                data-accordion="false">
+
+                <li class="nav-item menu-open">
+                    <a href="#" class="nav-link active">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Danh mục sản phẩm
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a th:href="@{/user}" class="nav-link active">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Danh mục</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a th:href="@{/user}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Sản Phẩm</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/user}" class="nav-link">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Quản lí nhân viên
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head th:insert="~{/layout/header :: #html_header}">
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+    <nav th:insert="~{/layout/NavBar :: #html_navbar}"/>
+    <aside th:insert="~{/layout/SliderBar :: #html_sliderbar}"/>
+    <div th:insert="~{/layout/Content_wrapper :: #html_content_wrapper}"/>
+    <footer th:insert="~{/layout/Footer :: #html_footer}" />
+</div>
+    <script th:src="@{BE/plugins/jquery/jquery.min.js}"></script>
+    <!-- Bootstrap 4 -->
+    <script th:src="@{BE/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
+    <!-- AdminLTE App -->
+    <script th:src="@{BE/dist/js/adminlte.min.js}"></script>
+</body>
+</html>
